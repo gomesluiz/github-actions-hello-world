@@ -12,7 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout from repository
+        uses: actions/checkout@v3
       - name: Set up Python 3.10
         uses: actions/setup-python@v3
         with:
@@ -24,4 +25,4 @@ jobs:
 
       - name: Run the application
         run: |
-          python main.py
+          python ./main.py
